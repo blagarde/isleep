@@ -1,0 +1,3 @@
+title=iSleep
+author=Baptiste Lagarde
+orientation=portrait

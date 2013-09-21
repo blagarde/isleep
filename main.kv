@@ -1,0 +1,25 @@
+#:kivy 1.4
+
+BoxLayout:
+    orientation: "vertical"
+    Label:
+        id: intro
+    TextInput:
+        id: path
+        text: 'readings.csv'
+    Label:
+        id: progress
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "Set path"
+            on_press: app.setpath()
+        Button:
+            text: "Start capture"
+            on_press: app.start()
+        Button:
+            text: "Stop capture"
+            on_press: app.stop()
+        Button:
+            text: "Quit"
+            on_press: app.quit()
