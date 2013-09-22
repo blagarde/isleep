@@ -4,16 +4,14 @@ BoxLayout:
     orientation: "vertical"
     Label:
         id: intro
-    TextInput:
+    BetterTextInput:
         id: path
-        text: 'readings.csv'
+        multiline: False
+        on_text_validate: app.setpath()
     Label:
         id: progress
     BoxLayout:
         orientation: "horizontal"
-        Button:
-            text: "Set path"
-            on_press: app.setpath()
         Button:
             text: "Start capture"
             on_press: app.start()
