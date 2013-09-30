@@ -24,8 +24,8 @@ class MainApp(App):
         self.hw.orientationSensorEnable(1)
         Clock.schedule_interval(self.update, 0.2)
         self.intro = self.root.ids['intro']
-        self.setpath()
         self.root.ids['path'].text = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'readings.csv')
+        self.setpath()
         self.root.ids['path'].hook = self.stop
         self.root.ids['path'].bind(focus=self.setpath)
         self.progress = self.root.ids['progress']
